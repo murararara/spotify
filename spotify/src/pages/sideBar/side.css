@@ -1,0 +1,29 @@
+.main {
+    display: flex;
+    background-color: black;
+    width: 13%;
+    height: 100vh;
+    flex-direction: column;
+}
+.nav-text {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 20px;
+}
+.nav-text2 {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 20px;
+}
+.playlist {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 20px;
+}
+#line {
+    width: 12.8vw;
+    height: 1px;
+}
