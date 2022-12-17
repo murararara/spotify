@@ -31,19 +31,17 @@ function Side() {
                 </div>
             </div>
             <hr id="line"/>
-            <div className="playlists">
-                <div className="playlist">
-                    My Playlist #1
-                </div>
-                <div className="playlist">
-                    My Playlist #2
-                </div>                
-                <div className="playlist">
-                    My Playlist #3
-                </div>
-                <div className="playlist">
-                    My Playlist #4
-                </div>
+            <div className="playlist">
+                My Playlist #1
+            </div>
+            <div className="playlist">
+                My Playlist #2
+            </div>                
+            <div className="playlist">
+                My Playlist #3
+            </div>
+            <div className="playlist">
+                My Playlist #4
             </div>
         </div>
     )
