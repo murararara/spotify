@@ -2,7 +2,7 @@ import React from "react";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Side from "./pages/sideBar/side";
-
+import { home, libraryPage, searchPage} from "./pages"
 function App() {
   return (
     <>
