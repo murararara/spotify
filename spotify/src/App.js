@@ -24,7 +24,9 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-import { Signup, Login, Home } from "./pages1";
+import {Home} from "./pages"
+import {Signup} from "./pages"
+import {Login} from "./pages"
 
 function App() {
   return (
@@ -34,7 +36,7 @@ function App() {
           <div>
             <section>
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
               </Routes>

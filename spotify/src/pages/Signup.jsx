@@ -1,33 +1,36 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
+import React from "react";
 import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../config";
 
-export const Login = () => {
-    const navigate = useNavigate();
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    
-    const onLogin = (e) => {
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                navigate("/");
-                console.log(user);
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, errorMessage);
-            });
-    };
-};
+export const Signup = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-return (
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+          navigate("/login");
+      })
+      .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+      });
+  };
+
+  return (
     <main>
       <section>
         <div>
           <div>
-            <h1>Focus App</h1>
+            <h1>Spotify</h1>
             <form>
               <div>
                 <label htmlFor="email-address">Email address</label>
@@ -62,4 +65,5 @@ return (
         </div>
       </section>
     </main>
-)
+  );
+};
