@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.containerr {
+    display: flex;
+    width: 20vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;    
+}
+
+.button {
+    color: white;
+    font-size: 30px;
+    border-top: 100px;
+}
+
+
+
+

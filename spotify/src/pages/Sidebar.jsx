@@ -1,27 +1,33 @@
 import React from "react";
-import { useState } from "react";
-import { AiFillHome } from "react-icons/ai"
-import { BiSearch } from "react-icons/bi"
+import { AiFillHome } from "react-icons/ai";
+import { BiSearch } from "react-icons/bi";
+import { VscLibrary } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import account from "../assets/accountPic.jpeg"
 import styles from "../styles/Sidebar.module.css"
+import { AiFillPlusSquare } from "react-icons/ai";
+
 
 export const Side = () => {
-    const [user] = useState("");
-
     return (
-        <div className={styles.container}>
-            <div classname={styles.main}>
+        <div className={styles.containerr}>
+            <div className={styles.main}>
                 <div className={styles.button}>
                     <div>
-                        <AiFillHome style={{color: "white", width: 30, height: 30}}/>
+                        <AiFillHome/>
                         <Link to="/Home">Home</Link>
                     </div>
                     <div>
-                        <BiSearch style={{color: "white", width: 30, height: 30}}/>
-                        <Link to="/Search">Search</Link>
+                        <BiSearch/>
+                        <Link to="/Home">Search</Link>
                     </div>
-                    
+                    <div>
+                        <VscLibrary/>
+                        <Link to="/Playlists">Playlists</Link>
+                    </div>
+                    <div>
+                        <AiFillPlusSquare/>
+                        <Link to="/Playlists">Create playlists</Link>
+                    </div>
                 </div>
             </div>
         </div>
